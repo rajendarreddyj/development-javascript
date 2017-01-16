@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Events</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!--The ng-click directive defines an AngularJS click event.-->
+  <div>
+    <button ng-click="count = count + 1">Click me!</button>
+    <p>{{ count }}</p>
+  </div>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.count = 0;
+        });
+    </script>
+</body>
+</html>

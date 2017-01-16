@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Bind</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <h1 ng-click="changeName()">{{firstname}}</h1>
+  </div>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.firstname = "Rajendar";
+            $scope.changeName = function() {
+                $scope.firstname = "Rajendarreddy";
+            }
+        });
+    </script>
+  <p>Click on the header to run the "changeName" function.</p>
+  <p>This example demonstrates how to use the controller to change
+    model data.</p>
+</body>
+</html>

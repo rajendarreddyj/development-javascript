@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Bind</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <input ng-model="firstname">
+  </div>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.firstname = "Rajendar";
+
+        });
+    </script>
+  <p>Use the ng-model directive on HTML controls (input, select,
+    textarea) to bind data between the view and the data model.</p>
+</body>
+</html>

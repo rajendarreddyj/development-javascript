@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Validation</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app="">
+  <p>Try writing in the input field:</p>
+  <form name="myForm">
+    <input name="myInput" ng-model="myInput" required>
+  </form>
+  <p>The input's valid state is:</p>
+  <h1>{{myForm.myInput.$valid}}</h1>
+</body>
+</html>

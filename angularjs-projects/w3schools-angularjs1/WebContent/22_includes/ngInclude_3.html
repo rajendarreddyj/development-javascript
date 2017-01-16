@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Angular Include</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+  <div ng-include="'http://www.refsnesdata.no/angular_include.asp'"></div>
+  <script>
+        var app = angular.module('myApp', [])
+
+        app.config(function($sceDelegateProvider) {
+            $sceDelegateProvider.resourceUrlWhitelist([ 'http://www.refsnesdata.no/**' ]);
+        });
+    </script>
+</body>
+</html>

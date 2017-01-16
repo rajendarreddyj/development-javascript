@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Directives</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+  <w3-test-directive></w3-test-directive>
+  <script>
+        var app = angular.module("myApp", []);
+        app.directive("w3TestDirective", function() {
+            return {
+                template : "<h1>Made by a directive!</h1>"
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+	"name": "w3schools-angularjs1",
+	"homepage": "https://github.com/rajendarreddyj/development-javascript",
+	"authors": [
+		"rajendarreddy jagapathi <rajendarreddyj@gmail.com>"
+	],
+	"description": "Angularjs 1.x Bower Project",
+	"main": "",
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular": "angularjs#^1.6.1",
+		"angular-animate": "^1.6.1",
+		"bootstrap-css-only": "^3.3.7",
+		"angular-route": "^1.6.1"
+	}
+}

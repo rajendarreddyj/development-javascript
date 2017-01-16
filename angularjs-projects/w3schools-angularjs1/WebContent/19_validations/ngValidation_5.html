@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Validation</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+<style>
+form.ng-pristine {
+  background-color: lightblue;
+}
+
+form.ng-dirty {
+  background-color: pink;
+}
+</style>
+</head>
+<body ng-app="">
+  <form name="myForm">
+    <p>Try writing in the input field:</p>
+    <input name="myName" ng-model="myName" required>
+    <p>The form gets a "ng-dirty" class when the form has been
+      modified, and will therefore turn pink.</p>
+  </form>
+</body>
+</html>

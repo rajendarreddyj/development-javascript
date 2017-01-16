@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Bind</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="firstname">
+    <h1>{{firstname}}</h1>
+  </div>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.firstname = "Rajendar";
+        });
+    </script>
+  <p>Change the name inside the input field, and the model data will
+    change automatically, and therefore also the header will change its
+    value.</p>
+</body>
+</html>

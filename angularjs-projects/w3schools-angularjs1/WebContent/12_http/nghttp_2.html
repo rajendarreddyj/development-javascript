@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular http</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <p>Today's welcome message is:</p>
+    <h1>{{myWelcome}}</h1>
+  </div>
+  <p>The $http service requests a page on the server, and the
+    response is set as the value of the "myWelcome" variable.</p>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $http({
+                method : "GET",
+                url : "welcome.htm"
+            }).then(function mySucces(response) {
+                $scope.myWelcome = response.data;
+            }, function myError(response) {
+                $scope.myWelcome = response.statusText;
+            });
+        });
+    </script>
+</body>
+</html>

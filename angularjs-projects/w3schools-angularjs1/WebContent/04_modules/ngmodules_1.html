@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Modules</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">{{ firstName + " " +
+    lastName }}</div>
+  <p>An AngularJS module defines an application. The module is a
+    container for the different parts of an application. The module is a
+    container for the application controllers. Controllers always belong
+    to a module.</p>
+  <p>This application ("myApp") has one controller ("myCtrl")</p>
+  <p>The [] parameter in the module definition can be used to define
+    dependent modules.</p>
+  <script>
+        //The [] parameter in the module definition can be used to define dependent modules.
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.firstName = "Rajendar";
+            $scope.lastName = "Jagapathi";
+        });
+    </script>
+</body>
+</html>

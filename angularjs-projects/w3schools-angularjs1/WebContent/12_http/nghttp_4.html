@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular http</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <h1>{{content}}</h1>
+  </div>
+  <p>The $http service executes different functions on success and
+    failure.</p>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $http.get("wrongfilename.htm").then(function(response) {
+                $scope.content = response.data;
+            }, function(response) {
+                $scope.content = "Something went wrong";
+            });
+        });
+    </script>
+</body>
+</html>

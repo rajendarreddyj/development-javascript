@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular Scopes</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <h1>{{carname}}</h1>
+  </div>
+  <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.carname = "Subaru Outback";
+        });
+    </script>
+  <p>The property "carname" was made in the controller, and can be
+    referred to in the view by using the {{ }} brackets.</p>
+</body>
+</html>
