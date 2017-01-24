@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Angular Articles Application</title>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="articlesApp.js"></script>
+</head>
+<body ng-app="articlesApp">
+  <div id="main" ng-controller="mainController">
+    <h1>Articles</h1>
+    <form ng-Submit="post()">
+      <input required type="text" placeholder="Your Name" ng-model="newArticle.username" /><br />
+      <br /> <input required type="text" placeholder="Article Title" ng-model="newArticle.title" /><br />
+      <br />
+      <textarea required maxlength="400" placeholder="Article Text" rows="3" ng-model="newArticle.text" ></textarea>
+      <br />
+      <br /> <input class="button" type="submit" value="Post" /><br />
+      <br />
+    </form>
+    <div id="articles-posted" >
+      <h1>Articles Posted</h1>
+      <div ng-repeat="article in articles | orderBy:'timestamp':true">
+        <h3>{{article.title}}</h3>
+        <p>{{article.text}}</p>
+        <p>
+          <small>Posted by {{article.username}} on {{article.timestamp| date: 'MM/dd/yyyy @ h:mm a'}}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
