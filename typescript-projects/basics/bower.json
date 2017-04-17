@@ -1,0 +1,21 @@
+{
+  "name": "basics",
+  "homepage": "https://github.com/rajendarreddyj/development-javascript",
+  "authors": [
+    "rajendarreddyj <rajendarreddyj@gmail.com>"
+  ],
+  "description": "typescript basics",
+  "main": "main",
+  "keywords": [
+    "typescript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,10 +1,10 @@
 {
-	"name": "w3schools-angularjs1",
+	"name": "w3schools-angular1",
 	"homepage": "https://github.com/rajendarreddyj/development-javascript",
 	"authors": [
 		"rajendarreddy jagapathi <rajendarreddyj@gmail.com>"
 	],
-	"description": "Angularjs 1.x Bower Project",
+	"description": "Angular 1.x Bower Project",
 	"main": "",
 	"license": "MIT",
 	"private": true,
