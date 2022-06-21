@@ -1,0 +1,24 @@
+{
+  "name": "basics",
+  "homepage": "https://github.com/rajendarreddyj/development-javascript",
+  "authors": [
+    "rajendarreddyj <rajendarreddyj@gmail.com>"
+  ],
+  "description": "d3 basics",
+  "main": "",
+  "keywords": [
+    "d3"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.8.0"
+  }
+}
